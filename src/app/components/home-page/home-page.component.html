@@ -1,1 +1,9 @@
 <p>home-page works!</p>
+
+<div class="nav">
+  <div class="nav-item" *ngFor="let project of projects">
+    <div class="project-label">{{project.name}}</div>
+    <div class="project-description">{{project.description}}</div>
+
+  </div>
+</div>

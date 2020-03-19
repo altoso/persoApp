@@ -19,12 +19,9 @@ export class HomePageComponent implements OnInit, OnDestroy {
   ) {
 
     this.projectsSubscription = this.projectsService.getProjects().subscribe((pro) => {
-      this.projects = pro.map(e => {
-        console.log(e);
-        return {
-          name: e.payload.name,
-        } as IProject;
-      });
+      console.log(pro);
+
+      this.projects = pro;
     });
   }
 

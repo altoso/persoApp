@@ -11,6 +11,6 @@ export class ProjectsService {
   }
 
   getProjects(): any {
-    return this.firestore.collection('projects').snapshotChanges();
+    return this.firestore.collection('projects').valueChanges();
   }
 }
